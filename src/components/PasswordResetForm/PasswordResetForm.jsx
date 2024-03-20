@@ -18,7 +18,7 @@ const PasswordResetForm = () => {
 		//const result = password_reset(body);
 		//TODO: the redirect is processed after confirmation by email
 		//if (result.status === 200) {
-		navigate("/password-set");
+		navigate("/auth/password-set");
 		//};
 	};
 

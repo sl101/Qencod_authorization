@@ -88,7 +88,7 @@ const LoginForm = () => {
 							>
 								{error ? error : "Error"}
 							</div>
-							<Link className={styles.forgot_pass} to="/password-reset">
+							<Link className={styles.forgot_pass} to="/auth/password-reset">
 								Forgot your password?
 							</Link>
 						</div>

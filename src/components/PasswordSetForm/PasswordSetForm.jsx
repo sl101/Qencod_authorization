@@ -19,7 +19,7 @@ const PasswordSetForm = () => {
 			//TODO: the redirect is processed after confirmation by email
 			//if (result.status === 200) {
 			alert("Password successfully changed");
-			navigate("/login");
+			navigate("/auth/login");
 			//};
 		}
 	};

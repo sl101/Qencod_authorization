@@ -1,33 +1,34 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Logo from "./components/Logo/Logo";
 import LoginForm from "./components/LoginForm/LoginForm";
 import "./styles/global.scss";
 import PasswordResetForm from "./components/PasswordResetForm/PasswordResetForm";
 import PasswordSetForm from "./components/PasswordSetForm/PasswordSetForm";
-import { useEffect } from "react";
+import AppIndex from "./components/AppIndex/AppIndex";
+import Logo from "./components/Logo/Logo";
 
 function App() {
 	const routes = [
 		{
-			path: "/login",
+			path: "/",
+			Component: AppIndex,
+		},
+		{
+			path: "/auth/login",
 			Component: LoginForm,
 		},
 		{
-			path: "/password-reset",
+			path: "/auth/password-reset",
 			Component: PasswordResetForm,
 		},
 		{
-			path: "/password-set",
+			path: "/auth/password-set",
 			Component: PasswordSetForm,
 		},
 	];
-	const router = createBrowserRouter(routes, {
-		basename: "/auth",
-	});
 
-	useEffect(() => {
-		if (window.location.pathname === "/") window.location.href = "/auth/login";
-	}, []);
+	const router = createBrowserRouter(routes, {
+		basename: "/",
+	});
 
 	return (
 		<div className="app">
