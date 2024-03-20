@@ -1,0 +1,131 @@
+@import "../../styles/colors";
+
+.login_form {
+	margin-top: clamp(40px, 10vw, 70px);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(16px, 10vw, 30px);
+}
+
+.media_box {
+	margin-top: clamp(16px, 10vw, 30px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+}
+
+.media {
+	width: 100%;
+	padding-block: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border: 1px solid $grey-300;
+	border-radius: 6px;
+	outline: none;
+	cursor: pointer;
+	transition: border-color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.media:focus {
+	border-color: $brand-800;
+}
+.media:hover {
+	background-color: $grey-100;
+}
+
+.media img {
+	max-width: 20px;
+	max-height: 20px;
+	object-fit: cover;
+}
+
+.decor {
+	width: 100%;
+	display: block;
+	padding-block: clamp(16px, 10vw, 30px);
+	position: relative;
+	font-size: 12px;
+	font-weight: 500;
+	color: $grey-400;
+	text-transform: uppercase;
+}
+
+.decor::before,
+.decor::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 46%;
+	height: 1px;
+	background-color: $grey-300;
+}
+
+.decor::before {
+	left: 0;
+}
+.decor::after {
+	right: 0;
+}
+
+.forgotpass_wrappper {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.messages {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.error {
+	transform: translateY(-50px);
+	color: $error-700;
+	opacity: 0;
+	visibility: hidden;
+	transition: transform 0.4s ease-in;
+}
+.error.active {
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+
+.forgot_pass {
+	font-weight: 500;
+	cursor: pointer;
+	color: $brand-800;
+	outline: none;
+	border: none;
+	background-color: transparent;
+}
+
+.forgot_pass:focus {
+	color: $brand-900;
+	text-decoration-line: underline;
+}
+.forgot_pass:hover {
+	text-decoration-line: underline;
+}
+
+.signup {
+	font-weight: 500;
+	margin-top: 20px;
+}
+.signup span {
+	margin-left: 5px;
+	color: $brand-800;
+	cursor: pointer;
+}
+
+.signup span:hover {
+	text-decoration-line: underline;
+}

@@ -1,0 +1,52 @@
+@import "../../../styles/colors";
+
+.input_wrapper {
+	position: relative;
+}
+
+.input {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	padding: 15px 12px;
+	padding-right: 50px;
+	font-weight: 400;
+	font-size: 15px;
+	border: 1px solid $grey-300;
+	border-radius: 6px;
+	outline: none;
+	color: $grey-800;
+	transition: border-color 0.2s ease-in;
+}
+
+.input::placeholder {
+	color: $grey-500;
+	cursor: text;
+}
+
+.input:focus {
+	border-color: $brand-800;
+}
+
+.eye {
+	width: 18px;
+	height: 14px;
+	position: absolute;
+	z-index: 20;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 16px;
+	cursor: pointer;
+}
+
+.eye path {
+	transition: fill 0.2s ease-in;
+}
+
+.eye:hover path {
+	fill: $brand-800;
+}
+
+.eye.open path {
+	fill: $brand-800;
+}
