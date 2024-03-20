@@ -2,8 +2,10 @@ import axios from "axios";
 import $api from "../http";
 
 export const login = async (email, password) => {
+	const url = `${process.env.REACT_APP_BASE_URL}/login`;
+	console.log("🚀 ~ login ~ url:", url);
 	try {
-		const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/login`, {
+		const result = await axios.post(url, {
 			email,
 			password,
 		});
