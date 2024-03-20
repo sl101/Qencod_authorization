@@ -54,6 +54,7 @@ export const token_access = async (access_id) => {
 			access_id
 		);
 		//TODO: processing service request logic
+		return result;
 	} catch (error) {
 		console.log(error);
 	}
@@ -67,6 +68,7 @@ export const token_refresh = async (refresh_token) => {
 			refresh_token
 		);
 		//TODO token change logic
+		return result;
 	} catch (error) {
 		console.log(error);
 	}
