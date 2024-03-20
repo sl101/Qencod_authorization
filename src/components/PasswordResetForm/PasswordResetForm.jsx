@@ -3,7 +3,7 @@ import Input from "../UI/Input/Input";
 import styles from "./PasswordResetForm.module.scss";
 import Button from "../UI/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
-import { password_reset } from "../../api/services/auth";
+//import { password_reset } from "../../api/services/auth";
 
 const PasswordResetForm = () => {
 	const navigate = useNavigate();
@@ -11,10 +11,10 @@ const PasswordResetForm = () => {
 	const [email, setEmail] = useState("");
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const body = {
-			email,
-			redirect_url: `${process.env.REACT_APP_BASE_URL}/password-set`,
-		};
+		//const body = {
+		//	email,
+		//	redirect_url: `${process.env.REACT_APP_BASE_URL}/password-set`,
+		//};
 		//const result = password_reset(body);
 		//TODO: the redirect is processed after confirmation by email
 		//if (result.status === 200) {
