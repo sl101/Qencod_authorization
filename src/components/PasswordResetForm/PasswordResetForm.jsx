@@ -36,7 +36,7 @@ const PasswordResetForm = () => {
 					/>
 				</div>
 				<Button type="submit" text="Send" />
-				<Link to="/login">
+				<Link to="/auth/login">
 					<Button type="button" text="Cancel" context="cancel" />
 				</Link>
 			</form>
