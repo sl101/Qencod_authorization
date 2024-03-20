@@ -6,7 +6,7 @@ const AppIndex = () => {
 
 	useEffect(() => {
 		navigate("/auth/login");
-	}, []);
+	}, [navigate]);
 
 	return <></>;
 };
